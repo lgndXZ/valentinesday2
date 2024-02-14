@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<style type="text/css">
+		.t{
+			font-size: 60px;
+		}
+		.no{
+			width: 300px;
+			height: 150px;
+			transition: 1s;
+			font-size: 30px;
+		}
+		.yes{
+			width: 300px;
+			height: 150px;
+			transition: 1s;
+			font-size: 40px;
+		}
+
+		.st{
+			width: 150px;
+			transition: 1s;
+			display: none;
+		}
+		.st3{
+			width: 150px;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="col-12 col-lg-10 mx-auto mt-5" style="padding-top: 30px; padding-bottom: 30px">
+		<div class="col-8 mx-auto text-center pt-5">
+			<h1 class="t">will you be my valentine ?</h1>
+		</div>
+		<div class="row col-12 col-lg-8 mx-auto mt-5">
+			<div class="col-12 col-lg-6 text-center">
+				<button type="button" class="btn btn-danger yes rounded-5 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">YES!!!!</button>
+				
+			</div>
+			<div class="col-12 col-lg-6 text-center mt-5 mt-lg-0">
+				<button type="button" class="btn btn-dark no rounded-5">no</button>
+				<img src="sticker.gif" class="st mt-2">
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade col-11" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	   		<div class="modal-content">
+	     		<div class="modal-header">
+	       			<h1 class="modal-title fs-5" id="exampleModalLabel">16/02/24 </h1>
+	       			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	     		</div>
+		     	<div class="modal-body text-center">
+		     		<h2>See u in <span class="text-danger">КИТАЙГОРОД</span> at <span class="text-danger">20:30</span></h2>
+		        	<img src="sticker3.gif" class="st3 mt-2">
+		     	</div>
+		     	<div class="modal-footer">
+		       		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		     	</div>
+	   		</div>
+	 	</div>
+	</div>
+
+	<script type="text/javascript">
+		let no = document.querySelector(".no")
+		let yes = document.querySelector(".yes")
+		let st = document.querySelector(".st")
+		let st3 = document.querySelector(".st3")
+
+		let no_w = 300
+		let yes_w = 300
+		let no_h = 150
+		let yes_h = 150
+		let no_fs = 30
+
+		no.onclick = function(){
+			no_w = no_w - 10
+			yes_w = yes_w + 10
+
+			no_h = no_h - 10
+			yes_h = yes_h + 10
+
+			no_fs = no_fs - 1
+
+			no.style.width = no_w + "px"
+			yes.style.width = yes_w + "px"
+
+			no.style.height = no_h + "px"
+			yes.style.height = yes_h + "px"
+
+			no.style.fontSize = no_fs + "px"
+
+			if (no_w == 290) {
+				no.innerHTML = "why?"
+			}
+			if (no_w == 280) {
+				no.innerHTML = "pls pookie ((("
+			}
+			if (no_w == 270) {
+				no.innerHTML = "╥﹏╥"
+			}
+
+			if (no_fs < 17) {
+				no.style.display = "none"
+			}
+
+			st.style.display = "inline"
+			st.style.width = yes_h + "px"
+
+		}
+
+		yes.onclick = function(){
+			st.style.display = "none"
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</body>
+</html>
